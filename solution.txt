@@ -1,2 +1,29 @@
-Please add your pseudocode to this file
-And a written explanation of your solution
+Pseudocode:
+
+create an empty array called results
+for each index i in the string
+for each following index j in the string
+  pull out the substring from index i to j 
+  add that substring to the results array
+
+return the results array
+
+Explanation of solution for string 'abc':
+
+outer loop(i)
+i = 0   a
+i = 1   b
+i = 2   c
+
+inner loop
+j = 1 string.slice(0,1) -> 'a'
+j = 2 string.slice(0,2) -> 'ab'
+j = 3 string.slice(0,3) -> 'abc'
+
+next iteration
+j = 2 string.slice(1,2) -> 'b'
+...
+
+this continues on until you have all of your consecutive substrings.
+
+Time complexity: O(n^2) because of the nested loop
